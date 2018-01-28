@@ -1,0 +1,66 @@
+/* @group Imports */
+@import url('_Fonts.css');
+/* @end */
+
+
+/* @group Overall */
+
+body {
+  background: #E7E2D7;
+  line-height: 1.8em;
+  padding-top: 70px;
+}
+a {
+  color: #c00;
+  text-decoration: none;
+}
+.glyphicon {
+  font-family: 'Glyphicons Halflings' !important;
+}
+clear {clear:both;}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.4em;
+  color: inherit;
+}
+
+.index-count {
+    text-align: right;
+    float: right;
+    font-style: italic;
+}
+/* @group Navbar */
+
+.navbar-default {
+  background-color: #ded9d0;
+  border-color: #CCC1B2;
+  border-width: 0 0 1px;
+}
+.labelcloud-container {
+  margin: 10em 0;
+  border-bottom: 1px dotted #CCC1B2;
+}
+.labelcloud-header {
+  border-bottom: 1px dotted #CCC1B2;
+}
+.labelcloud-inner {
+    margin: 1em 10em;
+}
+.labelcloud {
+    background-image: url(/_site/img/bg-burst.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: 100% 100%;
+}
+
+/* @group Footer */
+
+footer {
+  margin: 6em 0 10em;
+  padding: 1em 0 0;
+  border-top: 1px solid #CCC1B2;
+}
+
+/* @End */

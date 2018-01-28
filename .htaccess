@@ -1,0 +1,7 @@
+# No directory Indexes
+Options -Indexes
+
+# Cache Control, 48hrs * 60m * 60s = 172800
+<FilesMatch "\.(jpg|jpeg|png|gif|js|css|woff)$">
+Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>

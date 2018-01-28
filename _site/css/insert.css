@@ -1,0 +1,102 @@
+/* @group Imports */
+/* @import url("normalize.css");*/
+@import url("_Fonts.css");
+/* @end */
+
+/* @group Overall */
+
+body {
+	background: #E7E2D7;
+	line-height: 1.6em;
+}
+a {
+	color: #c00;
+	text-decoration: none;
+}
+
+/* @end */
+
+
+/* @group Book Read (CL) */
+#book-read {
+	text-align: center;
+}
+#book-read div.wrap {
+	/*width: 640px;
+	line-height: 1.6em !important; */
+	margin: 1em auto;
+	text-align: left;
+	background: #F7F2E7;
+}
+#book-read > div > div {
+	line-height: 1.6em !important;
+	margin: 10em 0;
+}
+#book-read #coverthumb-bo, .coverthumb-bo {
+	margin: 1em auto;
+}
+
+/* @end */
+
+/* @group Fragmention */
+
+[fragmention], .fragmention {
+	margin: 2em 0 2em 0;
+	background-color: #f4f6b2;
+}
+
+anno {
+	background-image: url(../img/anno-bg.png);
+	background-repeat: repeat-y;
+}
+
+/* @end */
+
+/* The cover we inserted needs to be scaled */
+img#cover {
+	width: 80%;
+}
+img {
+	max-width: 80%;
+}
+
+/* Small screens */
+@media only screen {
+	.wrap {
+		min-width: 400px;
+		font-size: 1.4em;
+		padding: 2em;
+	}
+} /* Define mobile styles */
+
+/* Medium screens */
+@media only screen and (min-width: 40.063em) {
+	.wrap {
+		min-width: 560px;
+		font-size: 1.6em;
+	}
+} /* min-width 641px, medium screens */
+
+/* Large screens */
+@media only screen and (min-width: 64.063em) {
+	.wrap {
+		width: 820px;
+		font-size: 1.6em;
+	}
+} /* min-width 1025px, large screens */
+
+/* XLarge screens */
+@media only screen and (min-width: 90.063em) {
+	.wrap {
+		min-width: 1220px;
+		font-size: 2em;
+	}
+} /* min-width 1441px, xlarge screens */
+
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) {
+	.wrap {
+		width: 620px;
+		font-size: 2.2em;
+	}
+} /* min-width 1921px, xxlarge screens */

@@ -1,0 +1,21 @@
+/* @group Fonts */
+
+/* Used for Annotation note display */
+@import url(https://fonts.googleapis.com/css?family=Kalam);
+
+/* Overall body font */
+/*@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,700);*/
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400);
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  }
+body, div, p, span, h1, h2, h3, h4, h5, h6 {
+  font-family: Merriweather,serif !important;
+  text-transform: none !important;
+  font-variant: normal !important;
+  font-weight:300;
+  }
+/* @end */

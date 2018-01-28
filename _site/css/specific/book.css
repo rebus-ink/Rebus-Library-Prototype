@@ -1,0 +1,237 @@
+/* @group Imports */
+@import url('../base.css');
+/* @end */
+
+#stack h1 {
+    border-bottom: 1px solid #9a978f;
+    margin-bottom: 1em;
+    padding-bottom: .2em;
+}
+
+#info-card {
+    border-bottom: 1px dotted #999;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+/* @group Book-CR */
+.cover {
+  margin-bottom: 1em;
+}
+
+.cover img {
+  padding: 0;
+  box-shadow: 0 1px 10px #96845D;
+  transform: scale(.99,.99);
+  transition: width .1s, height .1s, transform .1s, box-shadow .2s, ease-in-out;
+}
+.cover img:hover {
+  box-shadow: 0 4px 20px #96845D;
+  transform: scale(1,1);
+  text-decoration: none;
+  z-index: 100;
+}
+
+#about-book { }
+
+
+/* @group Info Card */
+
+.title {
+  color: #000;
+  margin: 0;
+}
+.subtitle {
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin: 0.5em 0 0 0;
+}
+.author {
+  color: #666;
+  font-weight: 300;
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 0.4em 0 1em 0;
+}
+.pubdate {
+  color: #666;
+}
+.tags {
+  color: #666;
+  margin: 1em 0 0;
+}
+.provenance h5 {
+  font-style: italic;
+    /* font-weight: bold; */
+    margin-bottom: 0;
+}
+
+.modal-body {
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+/* @end */
+
+.section-title {
+
+}
+#about-authors {}
+.otherauthors {}
+.otherauthor {}
+.otherbooks .cover {
+  margin: 0 10px 0 0;
+}
+.book.thumb .cover img { }
+.otherauthor {
+  float:left;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.otherbooks .cover img {
+  /* A paper-size ratio 1 : 1.4142 */
+  width:70px;
+  height:100px;
+}
+
+/* @group Annotations */
+
+/* @group Bookmarks */
+.annotation.bookmark {
+    background: none;
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 1px solid #999;
+    padding: 5px 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 16px 0 0 16px;
+    color: #666;
+    }
+.bookmark .annotation-text {
+  width: 140px;
+  font-size: .9em;
+  font-style: italic;
+  float: left;
+}
+.bookmark .annotation-date {
+  font-style: italic;
+}
+
+/* @end */
+
+/* @group Highlights */
+.annotation.highlight {
+  background: #f0eae0;
+  margin: 1em 0 0 0;
+  border: none;
+  box-shadow:none;-webkit-box-shadow:none;
+}
+.annotation.highlight .annotation-text {
+  font-size: 1.3em;
+  line-height: 1.8em;
+}
+
+/* @end */
+
+/* @group Notes */
+
+.annotation.note {
+  margin: 0 0 1em 4em;
+  border: none;
+  box-shadow:none;-webkit-box-shadow:none;
+  background: url(/_site/img/LinedPaper-Tile-BlueLighter.png) repeat 0 14px;
+}
+.annotation.note .annotation-text {
+    font-family: 'Kalam', cursive !important;
+  font-size: 1.3em;
+    line-height: 1.5em;
+}
+/* @end */
+
+.annotation-date {
+  font-size: .8em;
+  text-align: right;
+}
+
+.annotation.note .annotation-date {
+    font-family: 'Kalam', cursive !important;
+  font-size: .8em;
+  text-align: right;
+}
+/* @end */
+
+/* @group Popular Quotes */
+
+.quotes {
+  margin-bottom: 2em;
+}
+.well.quote {
+  margin: 1em 0;
+  padding: 0 1em;
+  border: none;
+  box-shadow:none;-webkit-box-shadow:none;
+  border-bottom: 1px solid #CCC1B2;
+  background-color: #E7E2D7;
+}
+.well.quote p {
+  font-size: 1.1em;
+}
+.well.quote p b {
+}
+
+/* @end */
+
+/* @group Blurb Text */
+
+.blurb p {
+  margin: 1em 0;
+}
+.blurb h3 {
+  margin: 1.5em 0 1em;
+}
+
+/* @end */
+
+/* @group Foot */
+
+.qrcode {
+  margin: 4em 0 1em 0;
+}
+.dl {
+  margin: 0 0 2em 0;
+  font-size: 6pt;
+}
+
+/* @end */
+/* @end */
+
+/* Small screens */
+@media only screen {
+  .read {
+    text-align: left;
+  }
+} /* Define mobile styles */
+
+/* Medium screens */
+@media only screen and (min-width: 40.063em) {
+} /* min-width 641px, medium screens */
+
+/* Large screens */
+@media only screen and (min-width: 64.063em) {
+.read {
+  text-align: center;
+}
+
+} /* min-width 1025px, large screens */
+
+/* XLarge screens */
+@media only screen and (min-width: 90.063em) {
+
+} /* min-width 1441px, xlarge screens */
+
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) {
+
+} /* min-width 1921px, xxlarge screens */

@@ -23,7 +23,7 @@
 
     // Make an array of unique bookIDs, with count for occurence overall
     $occ = 0;
-    foreach ($tag_books['tags'][$tagid]['books'] as $k => $bid) {
+    foreach ($tag_books['tags'][$tagid]['books'] as $bid => $cid) {
       //$tag_books['tags'][$tagid]['books'][$bid] = $ld[$bid];
       $tag_books['ubooks']['booksi'][$bid]['incs'][] = 1;
       $tag_books['ubooks']['booksi'][$bid]['count'] = count($tag_books['ubooks']['booksi'][$bid]['incs']);
@@ -63,9 +63,9 @@
   // Add each book's data to the array
   foreach ($similar_books as $bid => $cc) {
     unset($similar_books[$bid]);
-    $similar_books[$cc] = $ld[$cc];
+    $similar_books[$bid] = $ld[$bid];
   }
-  //print_r($similar_books);
+  //echo "<pre>"; print_r($similar_books); echo "</pre>";
 $display_books = $similar_books;
 include _WR . '/_bits/_t_other_books.php';
 unset($display_books);

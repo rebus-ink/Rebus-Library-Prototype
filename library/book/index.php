@@ -14,9 +14,8 @@ $aia_json = file_get_contents(_WR."/_depo/index.auth-author.json");
 $aia = json_decode($aia_json,true);
 $aia = $aia['author'];
 // Get Markdown
-require _WR.'/_code/libs/PHP_Markdown_1.0.2/markdown.php';
-// Get Smarty
-//require _WR.'/_code/libs/smarty-3.1.30/Smarty.class.php';
+#require _WR.'/_code/libs/PHP_Markdown_1.0.2/markdown.php';
+require_once _WR.'/_code/libs/PHP_Markdown_1.8.0/Michelf/Markdown.inc.php';
 // ---------------------------------------------------- PAGE SPECIFIC SETUP
 
 // Get the Query String
@@ -129,20 +128,9 @@ if (is_file($bookpath)) {
 
           <?php if (isset($bd['reads'])) { ?>
           <div class="readstate">
-            <?= $bd['reads']; ?>
+            Status: <?= strtoupper($bd['reads']); ?>
           </div>
           <?php } ?>
-
-          <?php if (isset($bd['provenance_cln'])) { ?>
-          <div class="provenance">
-            <h5>Provenance</h5>
-            <?php
-            $provenance_html = Markdown($bd['provenance_cln']);
-            ?>
-            <?= $provenance_html; ?>
-          </div>
-          <?php } ?>
-
 
           <div class="cite-book">
             <a class="" data-toggle="modal" data-target="#myModal">Cite this book</a>
@@ -239,6 +227,18 @@ echo $citation;
   <div class="row" id="extra-content"><!-- Start Row 2 -->
     <div class="col-md-7 col-md-push-5">
 
+			<?php if (isset($bd['provenance_cln'])) { ?>
+			<div class="provenance">
+				<h3>Provenance</h3>
+				<div class="blurb">
+						<?php
+						$provenance_html = \Michelf\Markdown::defaultTransform($bd['provenance_cln']);
+						?>
+						<?= $provenance_html; ?>
+				</div>
+			</div>
+			<?php } ?>
+
       <?php // READING NOTES ---
       if (isset($bd['reading_notes_cln'])) { ?>
       <div class="reading_notes">
@@ -247,7 +247,7 @@ echo $citation;
         </h3>
         <div class="blurb">
           <?php
-          $reading_notes_html = Markdown($bd['reading_notes_cln']);
+          $reading_notes_html = \Michelf\Markdown::defaultTransform($bd['reading_notes_cln']);
           ?>
           <?= $reading_notes_html; ?>
         </div>
@@ -318,7 +318,7 @@ echo $citation;
         </h3>
         <div class="blurb">
           <?php
-          $my_review_html = Markdown($bd['my_review_cln']);
+          $my_review_html = \Michelf\Markdown::defaultTransform($bd['my_review_cln']);
           ?>
           <?= $my_review_html; ?>
         </div>
@@ -379,7 +379,7 @@ echo $citation;
         </h3>
         <div class="blurb">
           <?php
-          $blurb_html = Markdown($bd['blurb_raw']);
+          $blurb_html = \Michelf\Markdown::defaultTransform($bd['blurb_raw']);
           ?>
           <?= $blurb_html; ?>
         </div>
